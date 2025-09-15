@@ -4,7 +4,7 @@ import '../models/pull_request_model.dart';
 
 class GitHubAPI {
   static const String baseUrl =
-      "https://api.github.com/repos/flutter/flutter/pulls";
+      "https://api.github.com/repos/Varugowdatp/github-pr-viewer/pulls?state=all";
 
   static Future<List<PullRequest>> fetchPullRequests() async {
     final response = await http.get(Uri.parse(baseUrl));
