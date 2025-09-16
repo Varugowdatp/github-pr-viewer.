@@ -1,22 +1,22 @@
-* GITHUB PULL REQUEST VIEWER
+# GitHub Pull Request Viewer
 
-A Flutter app that displays open Pull Requests from a GitHub repository using the GitHub REST API.
+A **Flutter app** that displays open Pull Requests from a GitHub repository using the **GitHub REST API**.  
 Includes token simulation, dark mode, Cupertino iOS-style UI, error handling, and bonus features.
 
-* OBJECTIVE
+---
 
--- Fetch pull requests from a GitHub repository.
+## Objective
+- Fetch pull requests from a GitHub repository  
+- Show PR title, description, author, and created date  
+- Simulate login with a fake token  
+- Store token securely using shared_preferences  
+- Display token inside the app  
 
--- Show PR title, description, author, and created date.
+---
 
--- Simulate login with a fake token.
-
--- Store token securely using shared_preferences.
-
--- Display token inside the app.
-
-* PROJECT STRUCTURE
-  lib/
+## Project Structure
+```plaintext
+lib/
  ┣ core/
  ┃ ┣ api/
  ┃ ┃ ┗ github_api.dart        # GitHub API integration
@@ -32,27 +32,28 @@ Includes token simulation, dark mode, Cupertino iOS-style UI, error handling, an
  ┃ ┣ pr_card.dart             # Card UI for pull requests
  ┃ ┣ loading_widget.dart      # Shimmer loading effect
  ┃ ┗ error_widget.dart        # Error + retry button
- ┣ main.dart                  # Entry point
+ ┗ main.dart                  # Entry point
+
+```
 
 *  SETUP INSTRUCTIONS
-  -- CLONE THE REPO
-     git clone https://github.com/Varugowdatp/github-pr-viewer.git
-     cd github-pr-viewer
-  -- INSTALL DEPENDENCY
-     flutter pub get
-  -- RUN
-      flutter run
- -- DEPENDEMCY USED
-     flutter pub add http shared_preferences provider shimmer cupertino_icons
+  -# Clone the repo
+git clone https://github.com/Varugowdatp/github-pr-viewer.git
+cd github-pr-viewer
 
-* TOKEN HANDLING
+# Install dependencies
+flutter pub get
+
+# Run the app
+flutter run
+# TOKEN HANDLING
 
 * On the login screen, the user enters any string as a fake token (or leaves empty for default abc123).
 * Token is saved using shared_preferences.
 * The stored token can be viewed later in the PR screen using a CupertinoAlertDialog.
 * If GitHub rate limits API requests (60/hour without auth), you can replace the fake token with a real GitHub personal access token (PAT) for unlimited requests.
 
-* Bonus Features Implemented
+# Bonus Features Implemented
 
  Cupertino iOS-style UI (alerts, buttons, switches, dialogs)
  Shimmer loading effect while data loads
@@ -63,7 +64,7 @@ Includes token simulation, dark mode, Cupertino iOS-style UI, error handling, an
  Clean, modular folder structure
  Attractive card design with shadows and rounded corners
 
- *KNOWN ISSUES AND IMPLEMNTATION
+# KNOWN ISSUES AND IMPLEMNTATION
 
  --The simulated token is not actually used in API requests unless replaced with a valid GitHub token.
 
@@ -73,8 +74,7 @@ Includes token simulation, dark mode, Cupertino iOS-style UI, error handling, an
 
 --Requires an internet connection.
 
-
-* DEMO VIDEO
+# DEMO VIDEO
   
 
 https://github.com/user-attachments/assets/98acab38-f1a5-4215-a9ac-d90067f3d5fb
