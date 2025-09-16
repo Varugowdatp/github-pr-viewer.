@@ -77,5 +77,7 @@ flutter run
 # DEMO VIDEO
   
 
-https://github.com/user-attachments/assets/98acab38-f1a5-4215-a9ac-d90067f3d5fb
+
+https://github.com/user-attachments/assets/815979b3-79f1-468b-a1f2-589816ac64a9
+
 
